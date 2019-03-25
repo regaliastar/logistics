@@ -32,7 +32,6 @@ def autolabel(rects, ax, xpos='center'):
 		ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.01*height,
                 '{}'.format(height), ha=ha[xpos], va='bottom')
 def bar_exam():
-
 	x = ('50', '100', '150', '200')	#任务数
 	#实验一
 	y1 = (55094, 104914, 158476, 203867)	#类型A时间 ms
@@ -40,7 +39,6 @@ def bar_exam():
 	#实验二
 	y3 = (56726, 117421, 173741, 236907)	#类型A时间 ms 未优化
 	y4 = (55412, 114597, 163948, 220110)	#类型B时间 ms 优化
-
 	n_groups = 4
 	fig, ax = plt.subplots()
 	index = np.arange(n_groups)
@@ -49,7 +47,6 @@ def bar_exam():
 	rects1 = ax.bar(index, y3, bar_width,
                 alpha=opacity, color='b',
                 label='class A')
-
 	rects2 = ax.bar(index + bar_width, y4, bar_width,
                 alpha=opacity, color='r',
                 label='class B')
@@ -61,7 +58,6 @@ def bar_exam():
 	ax.set_xticks(index + bar_width / 2)
 	ax.set_xticklabels(x)
 	ax.legend()
-
 	fig.tight_layout()
 	plt.show()
 
@@ -76,7 +72,6 @@ def line_chart():
 	#实验二
 	y3 = (56726, 117421, 173741, 236907)	#类型A时间 ms 未优化
 	y4 = (55412, 114597, 163948, 220110)	#类型B时间 ms 优化
-
 	fig, ax = plt.subplots()
 	ax.plot(x, y1, label="experiment 1 A")
 	ax.plot(x, y2, label="experiment 1 B")
